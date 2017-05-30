@@ -118,6 +118,9 @@ curl -L https://get.rvm.io | bash -s stable --rails
 source /usr/local/rvm/scripts/rvm
 rvm install ruby-2.2.3
 rvm use 2.2.3
+
+#use 2.2.1 for installing bundler
+sudo apt install ruby-bundler
 gem install bundler
 ```
 Grab the source for checkin
