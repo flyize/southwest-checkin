@@ -134,6 +134,8 @@ bundle install
 ```
 Create a db user and give them create privileges
 ````
+#install libcurl
+sudo apt-get install libcurl4-openssl-dev
 sudo -u postgres createuser root
 sudo -u postgres psql -c 'ALTER USER root CREATEDB'
 # this fixes db encoding
