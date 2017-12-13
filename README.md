@@ -118,6 +118,9 @@ curl -L https://get.rvm.io | bash -s stable --rails
 source /usr/local/rvm/scripts/rvm
 rvm install ruby-2.2.3
 rvm use 2.2.3
+
+#use 2.2.1 for installing bundler
+sudo apt install ruby-bundler
 gem install bundler
 ```
 Grab the source for checkin
@@ -131,6 +134,8 @@ bundle install
 ```
 Create a db user and give them create privileges
 ````
+#install libcurl
+sudo apt-get install libcurl4-openssl-dev
 sudo -u postgres createuser root
 sudo -u postgres psql -c 'ALTER USER root CREATEDB'
 # this fixes db encoding
