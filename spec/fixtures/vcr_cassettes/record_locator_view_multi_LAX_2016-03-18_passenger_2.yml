@@ -1,38 +1,38 @@
 ---
 http_interactions:
-- request:
-    method: get
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/DEF123?action=VIEW&first-name=John&last-name=Smith
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Southwest/3.2.5 (iPhone; iOS 9.2.1; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - "-pSqy4AVTOC9-vDAiAJ9MQ-API"
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      Content-Length:
-      - '2629'
-      Date:
-      - Sun, 20 Mar 2016 18:04:39 GMT
-    body:
-      encoding: UTF-8
-      string: '{"recordLocator":"DEF123","passengers":[{"secureFlightName":{"firstName":"ANDREW","lastName":"BAR","middleName":"","suffix":""},"birthDate":"1961-03-15","gender":"M","accountNumber":"00045645645645","redressNumber":"","knownTravelerId":"","tier":"NON_ELITE","loyaltyAccountType":"RAPID_REWARDS_MEMBER","earlyBirdEligibilities":[{"earlyBirdProductId":"TUNJfDIwMTYtMDMtMjR8MTczOXxBTkRSRVd8fE9SVEJBTFN8fDE1MDA=","status":"ELIGIBLE","priceCents":1500,"originationDestinationId":"201603241705-0500,201603241840-0700|MCI-LAX|WN1001"},{"earlyBirdProductId":"TEFYfDIwMTYtMDMtMjh8MjgzOHxBTkRSRVd8fE9SVEJBTFN8fDE1MDA=","status":"ELIGIBLE","priceCents":1500,"originationDestinationId":"201603280535-0700,201603281050-0500|LAX-MCI|WN1002"}]}],"itinerary":{"originationDestinations":[{"segments":[{"departureDateTime":"2016-03-24T17:05:00.000-05:00","arrivalDateTime":"2016-03-24T18:40:00.000-07:00","originationAirportCode":"MCI","destinationAirportCode":"LAX","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1001"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1001"},"legs":[{"originationAirportCode":"MKC","destinationAirportCode":"LAX"}],"wifiAvailable":null}],"durationMinutes":215,"originationDestinationId":"201603241705-0500,201603241840-0700|MCI-LAX|WN1001","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Companion","_links":{"deleteBoardingPass":null}},{"segments":[{"departureDateTime":"2016-03-28T05:35:00.000-07:00","arrivalDateTime":"2016-03-28T10:50:00.000-05:00","originationAirportCode":"LAX","destinationAirportCode":"MCI","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1002"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1002"},"legs":[{"originationAirportCode":"LAX","destinationAirportCode":"MCI"}],"wifiAvailable":null}],"durationMinutes":195,"originationDestinationId":"201603280535-0700,201603281050-0500|LAX-MCI|WN1002","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Companion","_links":{"deleteBoardingPass":null}}]},"receiptEmail":"FUU.BAR@EXAMPLE.COM","currencyType":"Dollars","international":false,"warnings":[],"unaccompaniedMinor":false,"_links":{"retrieveForCancel":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=Andrew&last-name=BAR&action=CANCEL","method":"GET"},"retrieveForChange":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=Andrew&last-name=BAR&action=CHANGE","method":"GET"},"retrieveForBuyEarlyBird":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=Andrew&last-name=BAR&action=EARLYBIRD","method":"GET"},"companionReservations":null}}'
-    http_version: 
-  recorded_at: Sun, 20 Mar 2016 18:04:39 GMT
+  - request:
+      method: get
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/DEF123?action=VIEW&first-name=John&last-name=Smith
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Southwest/3.2.5 (iPhone; iOS 9.2.1; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - "-pSqy4AVTOC9-vDAiAJ9MQ-API"
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        Content-Length:
+          - "2629"
+        Date:
+          - Sun, 20 Mar 2016 18:04:39 GMT
+      body:
+        encoding: UTF-8
+        string: '{"recordLocator":"DEF123","passengers":[{"secureFlightName":{"firstName":"ANDREW","lastName":"BAR","middleName":"","suffix":""},"birthDate":"1961-03-15","gender":"M","accountNumber":"00045645645645","redressNumber":"","knownTravelerId":"","tier":"NON_ELITE","loyaltyAccountType":"RAPID_REWARDS_MEMBER","earlyBirdEligibilities":[{"earlyBirdProductId":"TUNJfDIwMTYtMDMtMjR8MTczOXxBTkRSRVd8fE9SVEJBTFN8fDE1MDA=","status":"ELIGIBLE","priceCents":1500,"originationDestinationId":"201603241705-0500,201603241840-0700|MCI-LAX|WN1001"},{"earlyBirdProductId":"TEFYfDIwMTYtMDMtMjh8MjgzOHxBTkRSRVd8fE9SVEJBTFN8fDE1MDA=","status":"ELIGIBLE","priceCents":1500,"originationDestinationId":"201603280535-0700,201603281050-0500|LAX-MCI|WN1002"}]}],"itinerary":{"originationDestinations":[{"segments":[{"departureDateTime":"2016-03-24T17:05:00.000-05:00","arrivalDateTime":"2016-03-24T18:40:00.000-07:00","originationAirportCode":"MCI","destinationAirportCode":"LAX","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1001"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1001"},"legs":[{"originationAirportCode":"MKC","destinationAirportCode":"LAX"}],"wifiAvailable":null}],"durationMinutes":215,"originationDestinationId":"201603241705-0500,201603241840-0700|MCI-LAX|WN1001","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Companion","_links":{"deleteBoardingPass":null}},{"segments":[{"departureDateTime":"2016-03-28T05:35:00.000-07:00","arrivalDateTime":"2016-03-28T10:50:00.000-05:00","originationAirportCode":"LAX","destinationAirportCode":"MCI","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1002"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1002"},"legs":[{"originationAirportCode":"LAX","destinationAirportCode":"MCI"}],"wifiAvailable":null}],"durationMinutes":195,"originationDestinationId":"201603280535-0700,201603281050-0500|LAX-MCI|WN1002","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Companion","_links":{"deleteBoardingPass":null}}]},"receiptEmail":"FUU.BAR@EXAMPLE.COM","currencyType":"Dollars","international":false,"warnings":[],"unaccompaniedMinor":false,"_links":{"retrieveForCancel":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=Andrew&last-name=BAR&action=CANCEL","method":"GET"},"retrieveForChange":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=Andrew&last-name=BAR&action=CHANGE","method":"GET"},"retrieveForBuyEarlyBird":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=Andrew&last-name=BAR&action=EARLYBIRD","method":"GET"},"companionReservations":null}}'
+      http_version:
+    recorded_at: Sun, 20 Mar 2016 18:04:39 GMT
 recorded_with: VCR 2.9.3

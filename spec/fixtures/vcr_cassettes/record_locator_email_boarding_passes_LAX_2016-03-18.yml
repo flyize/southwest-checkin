@@ -1,38 +1,38 @@
 ---
 http_interactions:
-- request:
-    method: post
-    uri: https://api-extensions.southwest.com/v1/mobile/record-locator/ABC123/operation-infos/mobile-boarding-pass/notifications
-    body:
-      encoding: UTF-8
-      string: '{"names":[{"firstName":"Fuu","lastName":"Bar"}],"emailAddress":"fuu.bar@example.com"}'
-    headers:
-      User-Agent:
-      - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.notifications-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - yAJBO1UuSli-wMZ7Lc34fg-API
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.notifications-v1.0+json
-      Content-Length:
-      - '135'
-      Date:
-      - Thu, 24 Mar 2016 02:50:58 GMT
-    body:
-      encoding: UTF-8
-      string: '{"notifications":[{"status":"SUCCESS","transactionId":"123456789","messageId":"987654321","deliveryOption":"EMAIL","correlationId":1}]}'
-    http_version: 
-  recorded_at: Thu, 24 Mar 2016 02:50:58 GMT
+  - request:
+      method: post
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/record-locator/ABC123/operation-infos/mobile-boarding-pass/notifications
+      body:
+        encoding: UTF-8
+        string: '{"names":[{"firstName":"Fuu","lastName":"Bar"}],"emailAddress":"fuu.bar@example.com"}'
+      headers:
+        User-Agent:
+          - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.notifications-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - yAJBO1UuSli-wMZ7Lc34fg-API
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.notifications-v1.0+json
+        Content-Length:
+          - "135"
+        Date:
+          - Thu, 24 Mar 2016 02:50:58 GMT
+      body:
+        encoding: UTF-8
+        string: '{"notifications":[{"status":"SUCCESS","transactionId":"123456789","messageId":"987654321","deliveryOption":"EMAIL","correlationId":1}]}'
+      http_version:
+    recorded_at: Thu, 24 Mar 2016 02:50:58 GMT
 recorded_with: VCR 2.9.3

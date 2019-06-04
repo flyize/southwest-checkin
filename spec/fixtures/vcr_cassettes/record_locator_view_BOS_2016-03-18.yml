@@ -1,39 +1,40 @@
 ---
 http_interactions:
-- request:
-    method: get
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/ABC123?action=VIEW&first-name=Fuu&last-name=Bar
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Southwest/3.2.5 (iPhone; iOS 9.2.1; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - D2PSdEDuSi-nZZtJbjUxjg-API
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      Content-Length:
-      - '2237'
-      Date:
-      - Sun, 20 Mar 2016 22:35:10 GMT
-    body:
-      encoding: UTF-8
-      string: '{"recordLocator":"DEF123","passengers":[{"secureFlightName":{"firstName":"JOHN","lastName":"SMITH","middleName":"J","suffix":""},"birthDate":"1969-01-01","gender":"M","accountNumber":"00045645645645","redressNumber":"","knownTravelerId":"TT4564564","tier":"NON_ELITE","loyaltyAccountType":"RAPID_REWARDS_MEMBER","earlyBirdEligibilities":[{"earlyBirdProductId":"TUNJfDIwMTYtMDQtMTZ8MzgyfEFORFJFV3xKfE9SVEJBTFN8fDE1MDA=","status":"ELIGIBLE","priceCents":1500,"originationDestinationId":"201604161005-0500,201604161515-0400|MCI-STL,STL-BOS|WN382,WN1877"}]}],"itinerary":{"originationDestinations":[{"segments":[{"departureDateTime":"2016-04-16T10:05:00.000-05:00","arrivalDateTime":"2016-04-16T11:00:00.000-05:00","originationAirportCode":"MCI","destinationAirportCode":"STL","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"382"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"382"},"legs":[{"originationAirportCode":"MCI","destinationAirportCode":"STL"}],"wifiAvailable":null},{"departureDateTime":"2016-04-16T11:40:00.000-05:00","arrivalDateTime":"2016-04-16T15:15:00.000-04:00","originationAirportCode":"STL","destinationAirportCode":"BOS","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1877"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1877"},"legs":[{"originationAirportCode":"STL","destinationAirportCode":"BOS"}],"wifiAvailable":null}],"durationMinutes":250,"originationDestinationId":"201604161005-0500,201604161515-0400|MCI-STL,STL-BOS|WN382,WN1877","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Wanna
-        Get Away","_links":{"deleteBoardingPass":null}}]},"receiptEmail":"FUU.BAR@EXAMPLE.COM","currencyType":"Dollars","international":false,"warnings":[],"unaccompaniedMinor":false,"_links":{"retrieveForCancel":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=John&last-name=SMITH&action=CANCEL","method":"GET"},"retrieveForChange":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=John&last-name=SMITH&action=CHANGE","method":"GET"},"retrieveForBuyEarlyBird":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=John&last-name=SMITH&action=EARLYBIRD","method":"GET"},"companionReservations":null}}'
-    http_version: 
-  recorded_at: Sun, 20 Mar 2016 22:35:11 GMT
+  - request:
+      method: get
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/ABC123?action=VIEW&first-name=Fuu&last-name=Bar
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Southwest/3.2.5 (iPhone; iOS 9.2.1; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - D2PSdEDuSi-nZZtJbjUxjg-API
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        Content-Length:
+          - "2237"
+        Date:
+          - Sun, 20 Mar 2016 22:35:10 GMT
+      body:
+        encoding: UTF-8
+        string:
+          '{"recordLocator":"DEF123","passengers":[{"secureFlightName":{"firstName":"JOHN","lastName":"SMITH","middleName":"J","suffix":""},"birthDate":"1969-01-01","gender":"M","accountNumber":"00045645645645","redressNumber":"","knownTravelerId":"TT4564564","tier":"NON_ELITE","loyaltyAccountType":"RAPID_REWARDS_MEMBER","earlyBirdEligibilities":[{"earlyBirdProductId":"TUNJfDIwMTYtMDQtMTZ8MzgyfEFORFJFV3xKfE9SVEJBTFN8fDE1MDA=","status":"ELIGIBLE","priceCents":1500,"originationDestinationId":"201604161005-0500,201604161515-0400|MCI-STL,STL-BOS|WN382,WN1877"}]}],"itinerary":{"originationDestinations":[{"segments":[{"departureDateTime":"2016-04-16T10:05:00.000-05:00","arrivalDateTime":"2016-04-16T11:00:00.000-05:00","originationAirportCode":"MCI","destinationAirportCode":"STL","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"382"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"382"},"legs":[{"originationAirportCode":"MCI","destinationAirportCode":"STL"}],"wifiAvailable":null},{"departureDateTime":"2016-04-16T11:40:00.000-05:00","arrivalDateTime":"2016-04-16T15:15:00.000-04:00","originationAirportCode":"STL","destinationAirportCode":"BOS","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1877"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1877"},"legs":[{"originationAirportCode":"STL","destinationAirportCode":"BOS"}],"wifiAvailable":null}],"durationMinutes":250,"originationDestinationId":"201604161005-0500,201604161515-0400|MCI-STL,STL-BOS|WN382,WN1877","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Wanna
+          Get Away","_links":{"deleteBoardingPass":null}}]},"receiptEmail":"FUU.BAR@EXAMPLE.COM","currencyType":"Dollars","international":false,"warnings":[],"unaccompaniedMinor":false,"_links":{"retrieveForCancel":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=John&last-name=SMITH&action=CANCEL","method":"GET"},"retrieveForChange":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=John&last-name=SMITH&action=CHANGE","method":"GET"},"retrieveForBuyEarlyBird":{"href":"/v1/mobile/reservations/record-locator/DEF123?first-name=John&last-name=SMITH&action=EARLYBIRD","method":"GET"},"companionReservations":null}}'
+      http_version:
+    recorded_at: Sun, 20 Mar 2016 22:35:11 GMT
 recorded_with: VCR 2.9.3

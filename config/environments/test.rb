@@ -41,6 +41,8 @@ Rails.application.configure do
     reply_to: 'test@localhost:3000'
   }
 
+  config.active_job.queue_adapter = :test
+
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random
 

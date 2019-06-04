@@ -1,6 +1,9 @@
-# Southwest Checkin 2.0
+# Southwest Checkin 2.X
 
-[![Build Status](https://travis-ci.org/aortbals/southwest-checkin.svg?branch=master)](https://travis-ci.org/aortbals/southwest-checkin) [![Coverage Status](https://coveralls.io/repos/aortbals/southwest-checkin/badge.svg?branch=master&service=github)](https://coveralls.io/github/aortbals/southwest-checkin?branch=master)
+[![Build Status](https://travis-ci.org/davidkassa/southwest-checkin.svg?branch=master)](https://travis-ci.org/davidkassa/southwest-checkin)
+[![Coverage Status](https://coveralls.io/repos/github/davidkassa/southwest-checkin/badge.svg?branch=master)](https://coveralls.io/github/davidkassa/southwest-checkin?branch=master)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Automatically checks in passengers for their Southwest Flight.
 
@@ -11,68 +14,27 @@ If you are interested in the old version, see the [1.0 branch](https://github.co
 ## Features
 
 - Accounts
-    - an easy and convient way to manage your reservations
-    - view or remove your reservations at any time
-    - increased security
+  - an easy and convient way to manage your reservations
+  - view or remove your reservations at any time
+  - increased security
 - Email Notifications
-    - Notified when a reservation is added
-    - Notified on successful checkin
+  - Notified when a reservation is added
+  - Notified on successful checkin
 - Checks in all passengers for a given confirmation number
 - Secured via HTTPS
 - Modern UI
 - Modern background processing and job scheduling
 - Full test suite
 
+## Build
 
-## Debian 7 x64 Installation
-
-Install curl and wget
-
-```
-apt-get install -y curl wget
-```
-
-Install Postgres repo to apt
-
-```
-echo 'deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main' >> /etc/apt/sources.list.d/pgdg.list
-wget https://www.postgresql.org/media/keys/ACCC4CF8.asc
-apt-key add ACCC4CF8.asc
-```
-
-Install stuff
-
-```
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-apt-get update
-apt-get install -y nodejs git git-core nano unzip postgresql postgresql-contrib postgresql-server-dev-9.5 redis-server tmux autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
-```
-
-rbenv doesn't provide any installer, so we have to get use the source from Github. So, we need to clone it in our home directory.
-Then add to PATH
-
-```
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-```
-
-** Restart your shell **
-Now we need to install Ruby 2.2.1
-
-```
-apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
-rbenv install 2.2.1 -k
-rbenv global 2.2.1
-gem install rails --version 4.2.10
-gem install bundler
-```
+Can run on Heroku with a single button click
+Updated for Ruby 2.6.3, Rails 5.2.3 by a non-Rails person
 
 Grab the source for checkin
 
 ```
-git clone https://github.com/flyize/southwest-checkin.git
+git clone https://github.com/davidkassa/southwest-checkin.git
 cd southwest-checkin
 ```
 
@@ -83,14 +45,6 @@ bundle install
 ```
 
 Create a db user and give them create privileges (ignore any directory errors)
-
-```
-sudo -u postgres createuser root
-sudo -u postgres psql -c 'ALTER USER root CREATEDB'
-# this fixes db encoding
-sed -i -e 's/*default/*default\n  template: template0/g' config/database.yml
-```
-
 Populate the db
 
 ```
@@ -98,6 +52,7 @@ rake db:create db:migrate db:seed
 ```
 
 Create a config file replace your website, email, and email server. It must accept mail on port 587 with tls.
+You can use .env.example as a template
 
 ```
 echo 'SITE_NAME=Southwest Checkin
@@ -120,7 +75,11 @@ DEPLOY_USE_RBENV=true
 MAILER_DEFAULT_PROTOCOL=http
 MAILER_DEFAULT_HOST=mywebsite.com' > .env
 ```
+
+## Old but maybe useful bits
+
 Create a script to launch everything
+
 ```
 echo '#!/bin/sh
 service postgresql restart
@@ -136,27 +95,10 @@ echo Starting sidekiq
 tmux send-keys  -t sidekiq "cd /root/southwest-checkin" C-m
 tmux send-keys  -t sidekiq "/root/.rbenv/shims/bundle exec sidekiq &" C-m' > /root/start.sh
 ```
-Make it executable
-```
-chmod +x /root/start.sh
-```
-Make the script run on boot
-```
-sed -i -e 's|"exit 0"|removed|g' /etc/rc.local
-sed -i -e 's|exit 0|/root/start.sh\nexit 0|g' /etc/rc.local
-```
-Disable apache (if apache is installed)
-```
-update-rc.d apache2 disable
-```
-Disable ipv6 (otherwise you will find issues with the mailer)
-```
-echo 'net.ipv6.conf.all.disable_ipv6 = 1
-net.ipv6.conf.default.disable_ipv6 = 1
-net.ipv6.conf.lo.disable_ipv6 = 1' >> /etc/sysctl.conf
-```
+
 Enable Email in Dev Mode (update action_mailer settings)
 nano config/environments/development.rb
+
 ```
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -215,10 +157,4 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
-```
-
-Reboot
-
-```
-reboot
 ```

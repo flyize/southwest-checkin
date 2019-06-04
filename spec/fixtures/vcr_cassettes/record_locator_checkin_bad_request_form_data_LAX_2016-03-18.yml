@@ -1,41 +1,41 @@
 ---
 http_interactions:
-- request:
-    method: post
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/ABC123/boarding-passes
-    body:
-      encoding: UTF-8
-      string: names%5B%5D[firstName]=Fuu&names%5B%5D[lastName]=BAR
-    headers:
-      User-Agent:
-      - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - o6ylMbMpS-2XR63G3WFWxA-API
-      X-Cnection:
-      - close
-      - close
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '138'
-      Date:
-      - Thu, 24 Mar 2016 02:32:01 GMT
-    body:
-      encoding: UTF-8
-      string: '{"code":400400100,"message":"Request contains invalid characters","httpStatusCode":"BAD_REQUEST","requestId":"o6ylMbMpS-2XR63G3WFWxA-API"}'
-    http_version: 
-  recorded_at: Thu, 24 Mar 2016 02:32:01 GMT
+  - request:
+      method: post
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/ABC123/boarding-passes
+      body:
+        encoding: UTF-8
+        string: names%5B%5D[firstName]=Fuu&names%5B%5D[lastName]=BAR
+      headers:
+        User-Agent:
+          - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 400
+        message: Bad Request
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - o6ylMbMpS-2XR63G3WFWxA-API
+        X-Cnection:
+          - close
+          - close
+        Content-Type:
+          - application/json
+        Content-Length:
+          - "138"
+        Date:
+          - Thu, 24 Mar 2016 02:32:01 GMT
+      body:
+        encoding: UTF-8
+        string: '{"code":400400100,"message":"Request contains invalid characters","httpStatusCode":"BAD_REQUEST","requestId":"o6ylMbMpS-2XR63G3WFWxA-API"}'
+      http_version:
+    recorded_at: Thu, 24 Mar 2016 02:32:01 GMT
 recorded_with: VCR 2.9.3

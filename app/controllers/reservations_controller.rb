@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
   before_action :current_user_only!
   before_action :set_user, only: [:index, :create]
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
-  rescue_from Southwest::RequestArgumentError, with: :southwest_argument_error, only: :create
+  rescue_from Southwest::RequestArgumentError, with: :southwest_argument_error #, only: :create 
 
   respond_to :html
 

@@ -1,42 +1,43 @@
 ---
 http_interactions:
-- request:
-    method: post
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/ABC123/boarding-passes
-    body:
-      encoding: UTF-8
-      string: '{"names":[{"firstName":"Fuu","lastName":"Bar"},{"firstName":"Qix","lastName":"Bar"}]}'
-    headers:
-      User-Agent:
-      - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - 5efJhqHnSvO6oZfmIgLqhg-API
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
-      Content-Length:
-      - '2366'
-      Date:
-      - Sun, 27 Nov 2016 23:29:43 GMT
-      Access-Control-Allow-Origin:
-      - ''
-    body:
-      encoding: UTF-8
-      string: '{"maxFailedCheckInAttemptsReached":false,"passengerCheckInDocuments":[{"passenger":{"secureFlightFirstName":"FUU","secureFlightLastName":"BAR","secureFlightMiddleName":"","secureFlightSuffix":"","loyaltyAccountNumber":"000XXXXXXXXXXX","tier":"NON_ELITE","birthDate":"1969-01-01","specialConditions":[],"firstName":"Fuu","lastName":"Bar","redressNumber":"","gender":"M","passengerTypePrefix":"PTP_NONE"},"checkinDocuments":[{"boardingGroupNumber":"01","boardingGroup":"C","documentType":"BOARDING_PASS","departureDateTime":"2016-11-28T07:30:00.000","arrivalDateTime":"2016-11-28T09:50:00.000","origin":"MCI","destination":"HOU","secureFlightBarCode":"_REDACTED_","fareProductType":"wannaGetAway","gate":null,"flightNumber":"1234","hasPreCheck":true,"originName":"Kansas
-        City","destinationName":"Houston (Hobby)","carrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"drinkCouponBarCode":null,"issued":true,"nonRevenue":false,"reprint":false,"seat":null,"durationMinutes":140}],"mobileBoardingPassEligible":false},{"passenger":{"secureFlightFirstName":"QIX","secureFlightLastName":"BAR","secureFlightMiddleName":"BAZ","secureFlightSuffix":"","loyaltyAccountNumber":"00020080352110","tier":"NON_ELITE","birthDate":"1988-10-27","specialConditions":[],"firstName":"QIX","lastName":"BAR","redressNumber":"","gender":"F","passengerTypePrefix":"PTP_NONE"},"checkinDocuments":[{"boardingGroupNumber":"02","boardingGroup":"C","documentType":"BOARDING_PASS","departureDateTime":"2016-11-28T07:30:00.000","arrivalDateTime":"2016-11-28T09:50:00.000","origin":"MCI","destination":"HOU","secureFlightBarCode":"_REDACTED_","fareProductType":"wannaGetAway","gate":null,"flightNumber":"1234","hasPreCheck":true,"originName":"Kansas
-        City","destinationName":"Houston (Hobby)","carrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"drinkCouponBarCode":null,"issued":true,"nonRevenue":false,"reprint":false,"seat":null,"durationMinutes":140}],"mobileBoardingPassEligible":false}]}'
-    http_version: 
-  recorded_at: Sun, 27 Nov 2016 23:29:43 GMT
+  - request:
+      method: post
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/ABC123/boarding-passes
+      body:
+        encoding: UTF-8
+        string: '{"names":[{"firstName":"Fuu","lastName":"Bar"},{"firstName":"Qix","lastName":"Bar"}]}'
+      headers:
+        User-Agent:
+          - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - 5efJhqHnSvO6oZfmIgLqhg-API
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
+        Content-Length:
+          - "2366"
+        Date:
+          - Sun, 27 Nov 2016 23:29:43 GMT
+        Access-Control-Allow-Origin:
+          - ""
+      body:
+        encoding: UTF-8
+        string:
+          '{"maxFailedCheckInAttemptsReached":false,"passengerCheckInDocuments":[{"passenger":{"secureFlightFirstName":"FUU","secureFlightLastName":"BAR","secureFlightMiddleName":"","secureFlightSuffix":"","loyaltyAccountNumber":"000XXXXXXXXXXX","tier":"NON_ELITE","birthDate":"1969-01-01","specialConditions":[],"firstName":"Fuu","lastName":"Bar","redressNumber":"","gender":"M","passengerTypePrefix":"PTP_NONE"},"checkinDocuments":[{"boardingGroupNumber":"01","boardingGroup":"C","documentType":"BOARDING_PASS","departureDateTime":"2016-11-28T07:30:00.000","arrivalDateTime":"2016-11-28T09:50:00.000","origin":"MCI","destination":"HOU","secureFlightBarCode":"_REDACTED_","fareProductType":"wannaGetAway","gate":null,"flightNumber":"1234","hasPreCheck":true,"originName":"Kansas
+          City","destinationName":"Houston (Hobby)","carrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"drinkCouponBarCode":null,"issued":true,"nonRevenue":false,"reprint":false,"seat":null,"durationMinutes":140}],"mobileBoardingPassEligible":false},{"passenger":{"secureFlightFirstName":"QIX","secureFlightLastName":"BAR","secureFlightMiddleName":"BAZ","secureFlightSuffix":"","loyaltyAccountNumber":"00020080352110","tier":"NON_ELITE","birthDate":"1988-10-27","specialConditions":[],"firstName":"QIX","lastName":"BAR","redressNumber":"","gender":"F","passengerTypePrefix":"PTP_NONE"},"checkinDocuments":[{"boardingGroupNumber":"02","boardingGroup":"C","documentType":"BOARDING_PASS","departureDateTime":"2016-11-28T07:30:00.000","arrivalDateTime":"2016-11-28T09:50:00.000","origin":"MCI","destination":"HOU","secureFlightBarCode":"_REDACTED_","fareProductType":"wannaGetAway","gate":null,"flightNumber":"1234","hasPreCheck":true,"originName":"Kansas
+          City","destinationName":"Houston (Hobby)","carrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"drinkCouponBarCode":null,"issued":true,"nonRevenue":false,"reprint":false,"seat":null,"durationMinutes":140}],"mobileBoardingPassEligible":false}]}'
+      http_version:
+    recorded_at: Sun, 27 Nov 2016 23:29:43 GMT
 recorded_with: VCR 2.9.3

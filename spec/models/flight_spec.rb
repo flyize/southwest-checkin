@@ -17,7 +17,7 @@ RSpec.describe Flight, :type => :model do
   it { should belong_to :arrival_airport }
   it { should have_many :passenger_checkins }
 
-  it { should define_enum_for(:flight_type).with(%w{departure return}) }
+  it { should define_enum_for(:flight_type).with_values(%w{departure return}) }
 
   describe 'time zones' do
     fixtures :reservations, :flights, :airports

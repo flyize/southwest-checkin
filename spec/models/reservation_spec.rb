@@ -158,32 +158,38 @@ RSpec.describe Reservation, type: :model do
       end
 
       it 'schedules 2 checkins for both flights' do
+        ActiveJob::Base.queue_adapter = :test
         VCR.use_cassette(cassette) do
           Timecop.freeze(Time.zone.parse('1 Jan 2015')) do
-            subject
-            expect(ActiveJob::Base.queue_adapter.enqueued_jobs.count).to eq(2)
+            expect{
+              subject
+            }.to have_enqueued_job.on_queue("checkin").exactly(:twice)
           end
         end
       end
 
       it 'enqueues the checkin 24hrs before departure' do
+        ActiveJob::Base.queue_adapter = :test
         VCR.use_cassette(cassette) do
           Timecop.freeze(Time.zone.parse('1 Jan 2015')) do
-            subject
-            jobs = ActiveJob::Base.queue_adapter.enqueued_jobs.sort_by {|j| j[:at] }
-            enqueued_at = Time.zone.at(jobs.first[:at])
-            enqueued_at_2 = Time.zone.at(jobs.last[:at])
-            expect(enqueued_at).to eq(Time.zone.parse("Wed, 23 Mar 2016 22:05:00 UTC +00:00"))
-            expect(enqueued_at_2).to eq(Time.zone.parse("Sun, 27 Mar 2016 12:35:00 UTC +00:00"))
+            #Queue outgoing
+            expect{
+              subject
+            }.to have_enqueued_job.on_queue("checkin")
+            .at(Time.zone.parse("Wed, 23 Mar 2016 22:05:00 UTC +00:00")).exactly(:once)
+            .at(Time.zone.parse("Sun, 27 Mar 2016 12:35:00 UTC +00:00")).exactly(:once)
+            # Queue return trip
           end
         end
       end
 
       it 'does not enqueue flights in the past' do
+        ActiveJob::Base.queue_adapter = :test
         VCR.use_cassette(cassette) do
           Timecop.freeze(Time.zone.parse('1 Apr 2016')) do
-            subject
-            expect(ActiveJob::Base.queue_adapter.enqueued_jobs.count).to eq(0)
+            expect{
+              subject
+            }.to have_enqueued_job.on_queue("checkin").exactly(0)
           end
         end
       end

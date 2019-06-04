@@ -1,39 +1,40 @@
 ---
 http_interactions:
-- request:
-    method: get
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/ABC123?action=VIEW&first-name=Fuu&last-name=Bar
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Southwest/3.2.5 (iPhone; iOS 9.2.1; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - ilUuS1JAQYyblvw9xGJ7Wg-API
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '175'
-      Date:
-      - Sun, 20 Mar 2016 22:46:27 GMT
-    body:
-      encoding: UTF-8
-      string: '{"code":404599104,"message":"Hmm, we can''t find this reservation.
-        Please double-check your information.","httpStatusCode":"NOT_FOUND","requestId":"ilUuS1JAQYyblvw9xGJ7Wg-API"}'
-    http_version: 
-  recorded_at: Sun, 20 Mar 2016 22:46:28 GMT
+  - request:
+      method: get
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/ABC123?action=VIEW&first-name=Fuu&last-name=Bar
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Southwest/3.2.5 (iPhone; iOS 9.2.1; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 404
+        message: Not Found
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - ilUuS1JAQYyblvw9xGJ7Wg-API
+        Content-Type:
+          - application/json
+        Content-Length:
+          - "175"
+        Date:
+          - Sun, 20 Mar 2016 22:46:27 GMT
+      body:
+        encoding: UTF-8
+        string:
+          '{"code":404599104,"message":"Hmm, we can''t find this reservation.
+          Please double-check your information.","httpStatusCode":"NOT_FOUND","requestId":"ilUuS1JAQYyblvw9xGJ7Wg-API"}'
+      http_version:
+    recorded_at: Sun, 20 Mar 2016 22:46:28 GMT
 recorded_with: VCR 2.9.3

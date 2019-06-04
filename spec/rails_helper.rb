@@ -56,8 +56,16 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  config.include Devise::TestHelpers, type: :controller
-  config.include ActiveJob::TestHelper
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
+
+config.include Devise::Test::ControllerHelpers, type: :controller
+config.include ActiveJob::TestHelper
 
   # For testing Sidekiq directly if ActiveJob testing
   # is not sufficient. This will use the `sidekiq` ActiveJob

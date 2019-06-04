@@ -1,11 +1,7 @@
 language: ruby
-rvm:
-  - "2.2.4"
-addons:
-  postgresql: "9.4"
+services:
+  - postgresql
 env:
   - COVERAGE=true SITE_NAME=Southwest Checkin SITE_URL=http://localhost:3000
-script:
-  - rake
 before_script:
   - rake db:test:prepare

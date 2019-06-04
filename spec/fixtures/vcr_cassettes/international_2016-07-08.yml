@@ -1,40 +1,40 @@
 ---
 http_interactions:
-- request:
-    method: get
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/ABC123?action=VIEW&first-name=Fuu&last-name=Bar
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - 5PNP0iDAT5C6Gxaqx0GStg-API
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.reservations-v1.0+json
-      Content-Length:
-      - '1785'
-      Date:
-      - Fri, 08 Jul 2016 15:14:41 GMT
-      Access-Control-Allow-Origin:
-      - ''
-    body:
-      encoding: UTF-8
-      string: '{"recordLocator":"ABC123","passengers":[{"secureFlightName":{"firstName":"Fuu","lastName":"Bar","middleName":"B"},"birthDate":"1969-12-31","gender":"M","accountNumber":"000XXXXXXXXXXX","redressNumber":"","knownTravelerId":"","tier":"NON_ELITE","loyaltyAccountType":"RAPID_REWARDS_MEMBER","earlyBirdEligibilities":[{"earlyBirdProductId":null,"status":"INTL_RESERVATION","priceCents":0,"originationDestinationId":"201607161510-0600,201607162200-0500|BZE-HOU,HOU-MCI|WN1234,WN4567"}]}],"itinerary":{"originationDestinations":[{"segments":[{"departureDateTime":"2016-07-16T15:10:00.000-06:00","arrivalDateTime":"2016-07-16T18:40:00.000-05:00","originationAirportCode":"BZE","destinationAirportCode":"HOU","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"legs":[{"originationAirportCode":"BZE","destinationAirportCode":"HOU"}],"wifiAvailable":null},{"departureDateTime":"2016-07-16T20:10:00.000-05:00","arrivalDateTime":"2016-07-16T22:00:00.000-05:00","originationAirportCode":"HOU","destinationAirportCode":"MCI","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"4567"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"4567"},"legs":[{"originationAirportCode":"HOU","destinationAirportCode":"MCI"}],"wifiAvailable":null}],"durationMinutes":350,"originationDestinationId":"201607161510-0600,201607162200-0500|BZE-HOU,HOU-MCI|WN1234,WN4567","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Unavailable","_links":{"deleteBoardingPass":null}}]},"currencyType":"Dollars","international":true,"warnings":[],"unaccompaniedMinor":false,"_links":{"retrieveForCancel":null,"retrieveForChange":null,"retrieveForBuyEarlyBird":null,"companionReservations":null}}'
-    http_version: 
-  recorded_at: Fri, 08 Jul 2016 15:14:41 GMT
+  - request:
+      method: get
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/ABC123?action=VIEW&first-name=Fuu&last-name=Bar
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        User-Agent:
+          - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - 5PNP0iDAT5C6Gxaqx0GStg-API
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.reservations-v1.0+json
+        Content-Length:
+          - "1785"
+        Date:
+          - Fri, 08 Jul 2016 15:14:41 GMT
+        Access-Control-Allow-Origin:
+          - ""
+      body:
+        encoding: UTF-8
+        string: '{"recordLocator":"ABC123","passengers":[{"secureFlightName":{"firstName":"Fuu","lastName":"Bar","middleName":"B"},"birthDate":"1969-12-31","gender":"M","accountNumber":"000XXXXXXXXXXX","redressNumber":"","knownTravelerId":"","tier":"NON_ELITE","loyaltyAccountType":"RAPID_REWARDS_MEMBER","earlyBirdEligibilities":[{"earlyBirdProductId":null,"status":"INTL_RESERVATION","priceCents":0,"originationDestinationId":"201607161510-0600,201607162200-0500|BZE-HOU,HOU-MCI|WN1234,WN4567"}]}],"itinerary":{"originationDestinations":[{"segments":[{"departureDateTime":"2016-07-16T15:10:00.000-06:00","arrivalDateTime":"2016-07-16T18:40:00.000-05:00","originationAirportCode":"BZE","destinationAirportCode":"HOU","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"legs":[{"originationAirportCode":"BZE","destinationAirportCode":"HOU"}],"wifiAvailable":null},{"departureDateTime":"2016-07-16T20:10:00.000-05:00","arrivalDateTime":"2016-07-16T22:00:00.000-05:00","originationAirportCode":"HOU","destinationAirportCode":"MCI","operatingCarrierInfo":{"carrierCode":"WN","flightNumber":"4567"},"marketingCarrierInfo":{"carrierCode":"WN","flightNumber":"4567"},"legs":[{"originationAirportCode":"HOU","destinationAirportCode":"MCI"}],"wifiAvailable":null}],"durationMinutes":350,"originationDestinationId":"201607161510-0600,201607162200-0500|BZE-HOU,HOU-MCI|WN1234,WN4567","checkinDocumentReason":null,"checkinDocumentType":null,"fareType":"Unavailable","_links":{"deleteBoardingPass":null}}]},"currencyType":"Dollars","international":true,"warnings":[],"unaccompaniedMinor":false,"_links":{"retrieveForCancel":null,"retrieveForChange":null,"retrieveForBuyEarlyBird":null,"companionReservations":null}}'
+      http_version:
+    recorded_at: Fri, 08 Jul 2016 15:14:41 GMT
 recorded_with: VCR 2.9.3

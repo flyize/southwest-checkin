@@ -1,13 +1,9 @@
 {
   "name": "Southwest Checkin",
   "description": "This app automatically checks you into a southwest airlines flight.",
-  "keywords": [
-    "southwest airlines",
-    "checkin",
-    "rails"
-  ],
-  "website": "https://github.com/aortbals/southwest-checkin",
-  "repository": "https://github.com/aortbals/southwest-checkin",
+  "keywords": ["southwest airlines", "checkin", "rails"],
+  "website": "https://github.com/davidkassa/southwest-checkin",
+  "repository": "https://github.com/davidkassa/southwest-checkin",
   "success_url": "/",
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate db:seed"
@@ -29,17 +25,13 @@
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     },
-    "MAILER_DEFAULT_FROM_EMAIL" : {
+    "MAILER_DEFAULT_FROM_EMAIL": {
       "description": "The default address emails are sent from."
     },
-    "MAILER_DEFAULT_REPLY_TO" : {
+    "MAILER_DEFAULT_REPLY_TO": {
       "description": "The default email reply to.",
       "required": false
     }
   },
-  "addons": [
-    "rediscloud:30",
-    "heroku-postgresql",
-    "mailgun:starter"
-  ]
+  "addons": ["rediscloud:30", "heroku-postgresql", "mailgun:starter"]
 }

@@ -1,42 +1,43 @@
 ---
 http_interactions:
-- request:
-    method: post
-    uri: https://api-extensions.southwest.com/v1/mobile/reservations/record-locator/ABC123/boarding-passes
-    body:
-      encoding: UTF-8
-      string: '{"names":[{"firstName":"Fuu","lastName":"Bar"}]}'
-    headers:
-      User-Agent:
-      - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
-      X-Api-Key:
-      - l7xx8d8bfce4ee874269bedc02832674129b
-      Accept-Language:
-      - en-US;q=1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Correlationid:
-      - _3jBjejxQcCGMtinW9dpSQ-API
-      Content-Type:
-      - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
-      Content-Length:
-      - '1853'
-      Date:
-      - Sat, 09 Jul 2016 21:49:28 GMT
-      Access-Control-Allow-Origin:
-      - ''
-    body:
-      encoding: UTF-8
-      string: '{"maxFailedCheckInAttemptsReached":false,"passengerCheckInDocuments":[{"passenger":{"secureFlightFirstName":"FUU","secureFlightLastName":"BAR","secureFlightMiddleName":null,"secureFlightSuffix":null,"loyaltyAccountNumber":null,"tier":null,"birthDate":"1969-12-31","specialConditions":[],"redressNumber":"","gender":"FEMALE","passengerTypePrefix":"","travelerId":"200XXXXXXXXXXXXX","passengerType":"ADULT","recordLocator":"ABC123","hasExtraSeat":false,"hasLapChild":false},"checkinDocuments":[{"boardingGroupNumber":"39","boardingGroup":"B","documentType":"cleared","departureDateTime":"2016-07-10T09:50:00.000-05:00","arrivalDateTime":"2016-07-10T13:25:00.000-06:00","origin":"MCI","destination":"HOU","secureFlightBarCode":"","fareProductType":"wannaGetAway","gate":"B43","flightNumber":null,"hasPreCheck":false,"originName":"Kansas
-        City","destinationName":"Houston (Hobby)","carrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"drinkCouponBarCode":"","issued":true,"nonRevenue":false,"reprint":true,"seat":null,"durationMinutes":275,"documentReason":"","earlyBirdPurchased":false,"originationTerminal":"B","aircraftEquipmentType":"73W","wifiOnBoard":true},{"boardingGroupNumber":"31","boardingGroup":"B","documentType":"cleared","departureDateTime":"2016-07-10T14:20:00.000-05:00","arrivalDateTime":"2016-07-10T15:45:00.000-06:00","origin":"HOU","destination":"BZE","secureFlightBarCode":"","fareProductType":"wannaGetAway","gate":"2","flightNumber":null,"hasPreCheck":false,"originName":"Houston
-        (Hobby)","destinationName":"Belize City","carrierInfo":{"carrierCode":"WN","flightNumber":"4567"},"drinkCouponBarCode":"","issued":true,"nonRevenue":false,"reprint":true,"seat":null,"durationMinutes":145,"documentReason":"","earlyBirdPurchased":false,"aircraftEquipmentType":"73W","wifiOnBoard":true}],"mobileBoardingPassEligible":false}]}'
-    http_version: 
-  recorded_at: Sat, 09 Jul 2016 21:49:28 GMT
+  - request:
+      method: post
+      uri: https://mobile.southwest.com/api/extensions/v1/mobile/reservations/record-locator/ABC123/boarding-passes
+      body:
+        encoding: UTF-8
+        string: '{"names":[{"firstName":"Fuu","lastName":"Bar"}]}'
+      headers:
+        User-Agent:
+          - Southwest/3.3.7 (iPhone; iOS 9.3; Scale/2.00)
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
+        X-Api-Key:
+          - l7xx8d8bfce4ee874269bedc02832674129b
+        Accept-Language:
+          - en-US;q=1
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Server:
+          - Apache-Coyote/1.1
+        Correlationid:
+          - _3jBjejxQcCGMtinW9dpSQ-API
+        Content-Type:
+          - application/vnd.swacorp.com.mobile.boarding-passes-v1.0+json
+        Content-Length:
+          - "1853"
+        Date:
+          - Sat, 09 Jul 2016 21:49:28 GMT
+        Access-Control-Allow-Origin:
+          - ""
+      body:
+        encoding: UTF-8
+        string:
+          '{"maxFailedCheckInAttemptsReached":false,"passengerCheckInDocuments":[{"passenger":{"secureFlightFirstName":"FUU","secureFlightLastName":"BAR","secureFlightMiddleName":null,"secureFlightSuffix":null,"loyaltyAccountNumber":null,"tier":null,"birthDate":"1969-12-31","specialConditions":[],"redressNumber":"","gender":"FEMALE","passengerTypePrefix":"","travelerId":"200XXXXXXXXXXXXX","passengerType":"ADULT","recordLocator":"ABC123","hasExtraSeat":false,"hasLapChild":false},"checkinDocuments":[{"boardingGroupNumber":"39","boardingGroup":"B","documentType":"cleared","departureDateTime":"2016-07-10T09:50:00.000-05:00","arrivalDateTime":"2016-07-10T13:25:00.000-06:00","origin":"MCI","destination":"HOU","secureFlightBarCode":"","fareProductType":"wannaGetAway","gate":"B43","flightNumber":null,"hasPreCheck":false,"originName":"Kansas
+          City","destinationName":"Houston (Hobby)","carrierInfo":{"carrierCode":"WN","flightNumber":"1234"},"drinkCouponBarCode":"","issued":true,"nonRevenue":false,"reprint":true,"seat":null,"durationMinutes":275,"documentReason":"","earlyBirdPurchased":false,"originationTerminal":"B","aircraftEquipmentType":"73W","wifiOnBoard":true},{"boardingGroupNumber":"31","boardingGroup":"B","documentType":"cleared","departureDateTime":"2016-07-10T14:20:00.000-05:00","arrivalDateTime":"2016-07-10T15:45:00.000-06:00","origin":"HOU","destination":"BZE","secureFlightBarCode":"","fareProductType":"wannaGetAway","gate":"2","flightNumber":null,"hasPreCheck":false,"originName":"Houston
+          (Hobby)","destinationName":"Belize City","carrierInfo":{"carrierCode":"WN","flightNumber":"4567"},"drinkCouponBarCode":"","issued":true,"nonRevenue":false,"reprint":true,"seat":null,"durationMinutes":145,"documentReason":"","earlyBirdPurchased":false,"aircraftEquipmentType":"73W","wifiOnBoard":true}],"mobileBoardingPassEligible":false}]}'
+      http_version:
+    recorded_at: Sat, 09 Jul 2016 21:49:28 GMT
 recorded_with: VCR 2.9.3
